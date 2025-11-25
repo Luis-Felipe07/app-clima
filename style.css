@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.card {
+    width: 100%;
+    max-width: 550px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    gap: 10px; 
+}
+
+.search-box input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px; 
+    border-radius: 30px;
+    flex: 1;
+    font-size: 18px;
+    margin-right: 0; 
+}
+
+.search-box button,
+#locationBtn {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 30px; 
+    height: 60px; 
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    transition: 0.2s;
+    padding: 0 20px; 
+    font-size: 16px;
+}
+
+.search-box button:hover,
+#locationBtn:hover {
+    background: #d4f1ed;
+}
+
+.weather {
+    margin-top: 40px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+}
+
+.error {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #ffcdcd;
+    font-weight: bold;
+}
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0; 
+}
+
+#locationBtn {
+    width: 60px;
+    border-radius: 50%;
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffebd2; 
+}
+
+#locationBtn:hover {
+    background: #ffdfba;
+}
+
+
+.location-label {
+    font-size: 11px;
+    margin-top: 8px;
+    color: #000000; 
+    white-space: nowrap; 
+    opacity: 0.8;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.welcome-message h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    color: #ebfffc; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-weight: 700;
+}
+
+.welcome-message p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.welcome-message .small-text {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-top: 15px;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

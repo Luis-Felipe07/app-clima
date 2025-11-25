@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App del Clima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Ingresa una ciudad">
+
+            <button id="searchBtn">
+                Buscar
+            </button>
+
+            <div class="location-container">
+                <button id="locationBtn" title="Usar mi ubicación">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </button>
+                <span class="location-label">usar mi ubicación</span>
+            </div>
+        </div>
+
+        <div class="welcome-message" id="welcomeMessage">
+            <h2>Bienvenido a <span class="brand-name">NovaClima</span> 🌤️</h2>
+            <p>La mejor app para consultar el clima en tiempo real.</p>
+            <p class="small-text">Ingresa una ciudad o usa tu ubicación para comenzar.</p>
+        </div>
+
+        <div class="error" id="errorMessage" style="display: none;">
+            <p>Ciudad no encontrada. Intenta de nuevo.</p>
+        </div>
+
+        <div class="weather" id="weatherResult" style="display: none;">
+            <h2 class="city" id="cityName">Ciudad</h2>
+            <h1 class="temp" id="temp">0°C</h1>
+            <div class="details">
+                <div class="col">
+                    <p class="humidity" id="humidity">0%</p>
+                    <p>Humedad</p>
+                </div>
+                <div class="col">
+                    <p class="description" id="description">Cielo</p>
+                    <p>Condición</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
