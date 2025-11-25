@@ -44,7 +44,6 @@ body {
     border-radius: 30px;
     flex: 1;
     font-size: 18px;
-    margin-right: 0;
     min-width: 0; 
 }
 
@@ -61,6 +60,7 @@ body {
     transition: 0.2s;
     padding: 0 20px; 
     font-size: 16px;
+    white-space: nowrap; 
 }
 
 .search-box button:hover,
@@ -136,7 +136,6 @@ body {
     opacity: 0.8;
 }
 
-
 .welcome-message {
     text-align: center;
     margin-top: 40px;
@@ -173,49 +172,67 @@ body {
 }
 
 
-@media (max-width: 480px) {
+  /* DISEÑO PARA TELEFONOS*/
+  
+
+@media (max-width: 600px) {
     .card {
         padding: 30px 20px;
-        border-radius: 15px;
     }
 
-    .search-box {
-        gap: 5px; 
+    
+    .weather h1 {
+        font-size: 60px;
     }
 
+    .weather h2 {
+        font-size: 35px;
+    }
+
+    
     .search-box input {
-        height: 50px; 
+        height: 50px;
         padding: 10px 15px;
         font-size: 16px;
     }
 
-    .search-box button,
+    .search-box button {
+        height: 50px;
+        padding: 0 15px;
+    }
+
     #locationBtn {
+        width: 50px;
         height: 50px;
     }
 
-    #searchBtn {
-        padding: 0 15px; 
-        font-size: 14px;
+    
+    .location-label {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+   
+    .search-box {
+        flex-wrap: wrap;
     }
     
-    #locationBtn {
-        width: 50px; 
+    .search-box input {
+        width: 100%; 
+        margin-bottom: 10px;
     }
 
-    .weather h1 {
-        font-size: 55px; 
+    .search-box button {
+        flex: 1; 
     }
 
-    .weather h2 {
-        font-size: 32px;
+    .location-container {
+        margin-left: auto; 
     }
 
-    .welcome-message h2 {
-        font-size: 24px;
-    }
-    
     .details {
         margin-top: 30px;
+        padding: 0;
     }
 }
