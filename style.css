@@ -10,8 +10,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; 
     color: #fff;
+    padding: 20px; 
 }
 
 .card {
@@ -43,7 +44,8 @@ body {
     border-radius: 30px;
     flex: 1;
     font-size: 18px;
-    margin-right: 0; 
+    margin-right: 0;
+    min-width: 0; 
 }
 
 .search-box button,
@@ -126,7 +128,6 @@ body {
     background: #ffdfba;
 }
 
-
 .location-label {
     font-size: 11px;
     margin-top: 8px;
@@ -134,6 +135,7 @@ body {
     white-space: nowrap; 
     opacity: 0.8;
 }
+
 
 .welcome-message {
     text-align: center;
@@ -165,8 +167,55 @@ body {
     margin-top: 15px;
 }
 
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 480px) {
+    .card {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .search-box {
+        gap: 5px; 
+    }
+
+    .search-box input {
+        height: 50px; 
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .search-box button,
+    #locationBtn {
+        height: 50px;
+    }
+
+    #searchBtn {
+        padding: 0 15px; 
+        font-size: 14px;
+    }
+    
+    #locationBtn {
+        width: 50px; 
+    }
+
+    .weather h1 {
+        font-size: 55px; 
+    }
+
+    .weather h2 {
+        font-size: 32px;
+    }
+
+    .welcome-message h2 {
+        font-size: 24px;
+    }
+    
+    .details {
+        margin-top: 30px;
+    }
 }
